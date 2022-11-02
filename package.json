@@ -1,0 +1,144 @@
+{
+  "name": "startupkit-hubspot-webpack",
+  "version": "1.0.0",
+  "author": "Thomas van Deursen",
+  "license": "MIT",
+  "main": "Index.js",
+  "private": true,
+  "scripts": {
+    "webpack::build": "cross-env NODE_ENV=production webpack --config ./.config/webpack.config.js",
+    "webpack::watch": "webpack --watch --config ./.config/webpack.config.js",
+    "webpack::debugging": "webpack --watch --mode development --config ./.config/webpack.config.js",
+    "upgrade": "yarn upgrade-interactive"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "cssnano": {
+    "preset": "default"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "indentation": 4,
+      "selector-max-compound-selectors": null,
+      "scss/selector-no-redundant-nesting-selector": null,
+      "selector-class-pattern": null,
+      "unit-disallowed-list": [
+        "px",
+        "em"
+      ],
+      "selector-max-id": 1,
+      "selector-no-qualifying-type": null,
+      "block-no-empty": [
+        true,
+        {
+          "severity": "warning"
+        }
+      ],
+      "scss/at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extends",
+            "apply",
+            "tailwind",
+            "layer",
+            "components",
+            "utilities",
+            "screen"
+          ]
+        }
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "strict": [
+        "error",
+        "global"
+      ],
+      "no-unused-vars": "warn",
+      "curly": "warn",
+      "indent": [
+        "warn",
+        4
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@alpinejs/collapse": "^3.10.5",
+    "@alpinejs/focus": "^3.10.5",
+    "@alpinejs/intersect": "^3.10.5",
+    "@alpinejs/mask": "^3.10.5",
+    "@babel/core": "^7.19.6",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "@vimeo/player": "^2.18.0",
+    "@vue/compiler-sfc": "^3.2.41",
+    "alpinejs": "3.10.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.0.1",
+    "blaze-slider": "^1.8.0",
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "browserlist": "^1.0.1",
+    "caniuse-lite": "^1.0.30001429",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.14",
+    "eslint": "^8.26.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.18",
+    "postcss-import": "^15.0.0",
+    "postcss-loader": "^7.0.1",
+    "regenerator-runtime": "^0.13.10",
+    "shx": "^0.3.4",
+    "simple-parallax-js": "^5.6.2",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-webpack-plugin": "^3.3.0",
+    "tailwindcss": "^3.2.1",
+    "ts-loader": "^9.4.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4",
+    "vue": "^3.2.41",
+    "vue-loader": "^17.0.1",
+    "vue-style-loader": "^4.1.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "resolutions": {
+    "@types/eslint": "^7.29.0",
+    "autoprefixer": "10.4.5"
+  },
+  "packageManager": "yarn@3.2.1"
+}
