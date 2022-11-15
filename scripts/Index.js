@@ -13,7 +13,6 @@ const getComponents = async () => {
         //import('./JS/Components/Sliders/Sliders'),
         //import('./JS/Components/Parallax/Parallax'),
         //import('./JS/Components/backgroundLazyLoad/BackgroundLazyLoad'),
-        //import('./JS/Components/Vimeo/vimeo')
     ]);
 
     //vimeo();
